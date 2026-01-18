@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parcel Details Form</title>
+    <link rel="stylesheet" href="booking_officer_styles.css">
+</head>
+<body>
+    <div class="form-container">
+        <h1>Parcel Details Form</h1>
+        <form id="parcel-form">
+            <!-- Sender Information -->
+            <fieldset>
+                <legend>Sender Information</legend>
+                <label for="sender-name">Name:</label>
+                <input type="text" id="sender-name" name="sender-name" required>
+                
+                <label for="sender-contact">Contact Details:</label>
+                <input type="tel" id="sender-contact" name="sender-contact" required>
+            </fieldset>
+
+            <!-- Receiver Information -->
+            <fieldset>
+                <legend>Receiver Information</legend>
+                <label for="receiver-name">Name:</label>
+                <input type="text" id="receiver-name" name="receiver-name" required>
+                
+                <label for="receiver-pin">Pin Code:</label>
+                <input type="text" id="receiver-pin" name="receiver-pin" required>
+                
+                <label for="receiver-contact">Contact Details:</label>
+                <input type="tel" id="receiver-contact" name="receiver-contact" required>
+            </fieldset>
+
+            <!-- Parcel Details -->
+            <fieldset>
+                <legend>Parcel Details</legend>
+                <label for="parcel-size">Size and Weight:</label>
+                <input type="text" id="parcel-size" name="parcel-size" placeholder="e.g., 30x20x10 cm, 2 kg" required>
+                
+                <label for="contents-description">Contents Description:</label>
+                <textarea id="contents-description" name="contents-description" rows="4" required></textarea>
+            </fieldset>
+
+            <!-- Shipping Options -->
+            <fieldset>
+                <legend>Shipping Options</legend>
+                <label for="delivery-speed">Choose Delivery Speed:</label>
+                <select id="delivery-speed" name="delivery-speed" required>
+                    <option value="standard">Standard</option>
+                    <option value="express">Express</option>
+                    <option value="overnight">Overnight</option>
+                </select>
+
+                <label>Packaging Preferences:</label>
+                <input type="radio" id="standard-packaging" name="packaging" value="standard" checked>
+                <label for="standard-packaging">Standard Packaging</label>
+                
+                <input type="radio" id="custom-packaging" name="packaging" value="custom">
+                <label for="custom-packaging">Custom Packaging</label>
+                
+                <input type="radio" id="eco-friendly-packaging" name="packaging" value="eco-friendly">
+                <label for="eco-friendly-packaging">Eco-friendly Packaging</label>
+
+                <input type="radio" id="fragile-handling" name="packaging" value="fragile">
+                <label for="fragile-handling">Fragile Item Handling</label>
+            </fieldset>
+
+            <!-- Date and Time Selection -->
+            <fieldset>
+                <legend>Date and Time Selection</legend>
+                <label for="pickup-time">Choose Preferred Pickup/Drop-off Time:</label>
+                <input type="datetime-local" id="pickup-time" name="pickup-time" required>
+            </fieldset>
+
+            <!-- Service Cost and Payment -->
+            <fieldset>
+                <legend>Service Cost and Payment</legend>
+                <p id="service-cost">Estimated Cost: $0.00</p>
+                <label for="payment-method">Payment Method:</label>
+                <select id="payment-method" name="payment-method" required>
+                    <option value="credit-card">Credit Card</option>
+                    <option value="paypal">PayPal</option>
+                    <option value="bank-transfer">Bank Transfer</option>
+                </select>
+            </fieldset>
+
+            <!-- Additional Services -->
+            <fieldset>
+                <legend>Additional Services</legend>
+                <label for="insurance">Insurance Options:</label>
+                <input type="radio" id="insurance-yes" name="insurance" value="yes">
+                <label for="insurance-yes">Include Insurance</label>
+                
+                <input type="radio" id="insurance-no" name="insurance" value="no" checked>
+                <label for="insurance-no">No Insurance</label>
+
+                <label for="tracking">Tracking Services:</label>
+                <input type="checkbox" id="tracking" name="tracking" value="yes">
+                <label for="tracking">Include Tracking</label>
+            </fieldset>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <script src="booking_officer_script.js"></script>
+</body>
+</html>

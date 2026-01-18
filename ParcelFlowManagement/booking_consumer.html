@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parcel Booking</title>
+    <link rel="stylesheet" href="booking_consumer_styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Parcel Booking Form</h1>
+
+        <form id="booking-form">
+            <!-- Sender Information -->
+            <fieldset>
+                <legend>Sender Information</legend>
+                <div class="form-group">
+                    <label for="sender-name">Name:</label>
+                    <input type="text" id="sender-name" name="sender-name" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="sender-address">Address:</label>
+                    <input type="text" id="sender-address" name="sender-address" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="sender-contact">Contact Details:</label>
+                    <input type="text" id="sender-contact" name="sender-contact" readonly>
+                </div>
+            </fieldset>
+
+            <!-- Receiver Information -->
+            <fieldset>
+                <legend>Receiver Information</legend>
+                <div class="form-group">
+                    <label for="receiver-name">Name:</label>
+                    <input type="text" id="receiver-name" name="receiver-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="receiver-address">Address:</label>
+                    <input type="text" id="receiver-address" name="receiver-address" required>
+                </div>
+                <div class="form-group">
+                    <label for="receiver-pin">Pin Code:</label>
+                    <input type="text" id="receiver-pin" name="receiver-pin" required>
+                </div>
+                <div class="form-group">
+                    <label for="receiver-contact">Contact Details:</label>
+                    <input type="text" id="receiver-contact" name="receiver-contact" required>
+                </div>
+            </fieldset>
+
+            <!-- Parcel Details -->
+            <fieldset>
+                <legend>Parcel Details</legend>
+                <div class="form-group">
+                    <label for="parcel-size">Size:</label>
+                    <input type="text" id="parcel-size" name="parcel-size" required>
+                </div>
+                <div class="form-group">
+                    <label for="parcel-weight">Weight:</label>
+                    <input type="text" id="parcel-weight" name="parcel-weight" required>
+                </div>
+                <div class="form-group">
+                    <label for="parcel-contents">Contents Description:</label>
+                    <textarea id="parcel-contents" name="parcel-contents" rows="3" required></textarea>
+                </div>
+            </fieldset>
+
+            <!-- Shipping Options -->
+            <fieldset>
+                <legend>Shipping Options</legend>
+                <div class="form-group">
+                    <label for="delivery-speed">Choose Delivery Speed:</label>
+                    <select id="delivery-speed" name="delivery-speed" required>
+                        <option value="standard">Standard</option>
+                        <option value="express">Express</option>
+                        <option value="overnight">Overnight</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="packaging-preference">Packaging Preference:</label>
+                    <select id="packaging-preference" name="packaging-preference" required>
+                        <option value="standard">Standard Packaging</option>
+                        <option value="custom">Custom Packaging</option>
+                        <option value="eco-friendly">Eco-friendly Packaging</option>
+                        <option value="fragile">Fragile Item Handling</option>
+                    </select>
+                </div>
+            </fieldset>
+
+            <!-- Date and Time Selection -->
+            <fieldset>
+                <legend>Date and Time Selection</legend>
+                <div class="form-group">
+                    <label for="pickup-time">Preferred Pickup Time:</label>
+                    <input type="datetime-local" id="pickup-time" name="pickup-time" required>
+                </div>
+                <div class="form-group">
+                    <label for="dropoff-time">Preferred Drop-off Time:</label>
+                    <input type="datetime-local" id="dropoff-time" name="dropoff-time" required>
+                </div>
+            </fieldset>
+
+            <!-- Service Cost and Payment -->
+            <fieldset>
+                <legend>Service Cost and Payment</legend>
+                <div class="form-group">
+                    <label for="service-cost">Service Cost:</label>
+                    <input type="text" id="service-cost" name="service-cost" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="payment-method">Mode of Payment:</label>
+                    <select id="payment-method" name="payment-method" required>
+                        <option value="credit">Credit Card</option>
+                        <option value="debit">Debit Card</option>
+                        <option value="paypal">PayPal</option>
+                    </select>
+                </div>
+                <div class="form-group" id="payment-details" style="display: none;">
+                    <h3>Enter Payment Details</h3>
+                    <div class="form-group">
+                        <label for="card-number">Card Number:</label>
+                        <input type="text" id="card-number" name="card-number" placeholder="XXXX-XXXX-XXXX-XXXX">
+                    </div>
+                    <div class="form-group">
+                        <label for="card-holder">Card Holder Name:</label>
+                        <input type="text" id="card-holder" name="card-holder">
+                    </div>
+                    <div class="form-group">
+                        <label for="expiry-date">Expiry Date:</label>
+                        <input type="text" id="expiry-date" name="expiry-date" placeholder="MM/YY">
+                    </div>
+                    <div class="form-group">
+                        <label for="cvv">CVV:</label>
+                        <input type="text" id="cvv" name="cvv" placeholder="XXX">
+                    </div>
+                </div>
+            </fieldset>
+
+            <!-- Additional Services -->
+            <fieldset>
+                <legend>Additional Services</legend>
+                <div class="form-group">
+                    <label for="tracking-services">Tracking Services:</label>
+                    <input type="checkbox" id="tracking-services" name="tracking-services">
+                </div>
+            </fieldset>
+
+            <button type="submit">Submit Booking</button>
+        </form>
+    </div>
+
+    <script src="booking_consumer_scripts.js"></script>
+</body>
+</html>

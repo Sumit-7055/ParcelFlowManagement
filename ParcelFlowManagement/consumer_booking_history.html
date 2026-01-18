@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Booking History</title>
+    <link rel="stylesheet" href="consumer_booking_history_styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <h1>Booking History</h1>
+                <div class="welcome-logout">
+                    <span id="welcome-message">Welcome, <span id="username">Customer</span></span>
+                    <button id="logout-button">Logout</button>
+                </div>
+            </div>
+        </header>
+        
+        <main>
+            <table id="booking-history-table">
+                <thead>
+                    <tr>
+                        <th>Customer ID</th>
+                        <th>Booking ID</th>
+                        <th>Booking Date</th>
+                        <th>Receiver Name</th>
+                        <th>Delivered Address</th>
+                        <th>Amount</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Rows will be populated dynamically -->
+                </tbody>
+            </table>
+            
+            <div class="pagination">
+                <button id="prev-button">Previous</button>
+                <button id="next-button">Next</button>
+            </div>
+        </main>
+    </div>
+
+    <script src="consumer_booking_history_script.js"></script>
+</body>
+</html>
