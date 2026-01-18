@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Package Status</title>
+    <link rel="stylesheet" href="delivery_update_styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Update Package Status</h1>
+        <form id="status-update-form">
+            <!-- Search Booking ID -->
+            <fieldset>
+                <legend>Search Booking</legend>
+                <div class="form-group">
+                    <label for="booking-id">Booking ID:</label>
+                    <input type="text" id="booking-id" name="booking-id" required>
+                    <button type="button" id="search-button">Search</button>
+                </div>
+            </fieldset>
+
+            <!-- Status Update -->
+            <fieldset id="status-update-details" style="display: none;">
+                <legend>Package Status</legend>
+                <div class="form-group">
+                    <label for="current-status">Current Status:</label>
+                    <input type="text" id="current-status" name="current-status" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="new-status">Update Status:</label>
+                    <select id="new-status" name="new-status" required>
+                        <option value="" disabled selected>Select status</option>
+                        <option value="Picked up">Picked up</option>
+                        <option value="In Transit">In Transit</option>
+                        <option value="Delivered">Delivered</option>
+                        <option value="Returned">Returned</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Save</button>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+
+    <script src="delivery_update_script.js"></script>
+</body>
+</html>

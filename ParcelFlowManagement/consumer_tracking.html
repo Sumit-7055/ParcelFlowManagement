@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track Package</title>
+    <link rel="stylesheet" href="consumer_tracking_styles.css">
+</head>
+<body>
+    <div class="header">
+        <div class="welcome-message">Welcome, <span id="username">Customer</span></div>
+        <button id="logout">Logout</button>
+    </div>
+    
+    <div class="tracking-container">
+        <h1>Track Your Package</h1>
+        
+        <div class="tracking-form">
+            <label for="booking-id">Booking ID:</label>
+            <input type="text" id="booking-id" maxlength="12" placeholder="Enter 12-digit Booking ID">
+            <button id="search-button">Search</button>
+        </div>
+        
+        <div id="tracking-status" class="hidden">
+            <h2>Tracking Status</h2>
+            <p><strong>Status:</strong> <span id="status">In Transit</span></p>
+            <p><strong>Current Location:</strong> <span id="location">Springfield Hub</span></p>
+            <p><strong>Estimated Delivery:</strong> <span id="estimated-delivery">2024-09-10</span></p>
+        </div>
+    </div>
+
+    <script src="consumer_tracking_script.js"></script>
+</body>
+</html>

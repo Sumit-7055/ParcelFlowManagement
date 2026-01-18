@@ -1,0 +1,91 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+}
+
+.header .welcome-message {
+    font-size: 18px;
+}
+
+.header button {
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+.header button:hover {
+    background-color: #003d7a;
+}
+
+.tracking-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.tracking-container h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    text-align: center;
+}
+
+.tracking-form {
+    margin-bottom: 20px;
+}
+
+.tracking-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.tracking-form input {
+    width: calc(100% - 120px);
+    padding: 8px;
+    margin-right: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.tracking-form button {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.tracking-form button:hover {
+    background-color: #0056b3;
+}
+
+#tracking-status {
+    display: none;
+}
+
+#tracking-status h2 {
+    margin-top: 0;
+    font-size: 20px;
+}
+
+#tracking-status p {
+    margin: 10px 0;
+}
