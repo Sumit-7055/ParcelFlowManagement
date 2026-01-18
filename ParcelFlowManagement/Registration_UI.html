@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="styles_Registration.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Registration Form</h1>
+        <form id="registrationForm">
+            <section>
+                <h2>1. Personal Information</h2>
+                
+                <div class="form-group">
+                    <label for="customerName">Customer Name:</label>
+                    <input type="text" id="customerName" name="customerName" maxlength="50" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="countryCode">Country Code:</label>
+                    <select id="countryCode" name="countryCode" required>
+                        <option value="+1">+1 (USA)</option>
+                        <option value="+44">+44 (UK)</option>
+                        <!-- Add more country codes here -->
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="mobileNumber">Mobile Number:</label>
+                    <input type="text" id="mobileNumber" name="mobileNumber" pattern="\d{10}" placeholder="10 digits" required>
+                </div>
+
+                <h3>Address:</h3>
+
+                <div class="form-group">
+                    <label for="houseNumber">House Number:</label>
+                    <input type="text" id="houseNumber" name="houseNumber" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="street">Street/Apartment:</label>
+                    <input type="text" id="street" name="street" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="city">City:</label>
+                    <input type="text" id="city" name="city" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="district">District:</label>
+                    <input type="text" id="district" name="district" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="zipCode">Zip Code:</label>
+                    <input type="text" id="zipCode" name="zipCode" pattern="\d{5,6}" placeholder="5 or 6 digits" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="parcelCode">Parcel Code:</label>
+                    <input type="text" id="parcelCode" name="parcelCode">
+                </div>
+
+                <div class="form-group">
+                    <label for="landmark">Landmark:</label>
+                    <input type="text" id="landmark" name="landmark">
+                </div>
+            </section>
+
+            <section>
+                <h2>2. Username and Password</h2>
+                <p><strong>Username:</strong> Generated automatically</p>
+
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\W).{8,}" title="Password must contain at least one lowercase letter, one uppercase letter, one special character, and be at least 8 characters long" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password:</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" required>
+                </div>
+            </section>
+
+            <section>
+                <h2>3. Preferences</h2>
+
+                <div class="form-group">
+                    <label for="mailDelivery">Mail Delivery:</label>
+                    <select id="mailDelivery" name="mailDelivery">
+                        <option value="standard">Standard</option>
+                        <option value="express">Express</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Notifications:</label>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="emailNotifications" name="notifications" value="email">
+                        <label for="emailNotifications">Email</label>
+                        <input type="checkbox" id="smsNotifications" name="notifications" value="sms">
+                        <label for="smsNotifications">SMS</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="otherOptions">Other Relevant Options:</label>
+                    <input type="text" id="otherOptions" name="otherOptions">
+                </div>
+            </section>
+
+            <button type="submit">Register</button>
+            <button type="reset">Reset</button>
+        </form>
+
+        <div id="acknowledgement" style="display: none;">
+            <h2>5. Acknowledgement Page</h2>
+            <p id="successMessage" style="color: green;">Consumer Registration Successful</p>
+            <p><strong>Username:</strong> <span id="generatedUsername"></span></p>
+            <p><strong>Name:</strong> <span id="displayName"></span></p>
+            <p><strong>Email:</strong> <span id="displayEmail"></span></p>
+        </div>
+    </div>
+    <script src="script_Registration.js"></script>
+</body>
+</html>
