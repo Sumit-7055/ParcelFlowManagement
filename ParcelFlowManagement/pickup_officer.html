@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule Pickup</title>
+    <link rel="stylesheet" href="pickup_officer_styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Schedule Pickup</h1>
+        <form id="pickup-form">
+            <!-- Search Booking ID -->
+            <fieldset>
+                <legend>Search Booking</legend>
+                <div class="form-group">
+                    <label for="booking-id">Booking ID:</label>
+                    <input type="text" id="booking-id" name="booking-id" required>
+                    <button type="button" id="search-button">Search</button>
+                </div>
+            </fieldset>
+
+            <!-- Pickup Details -->
+            <fieldset id="pickup-details" style="display: none;">
+                <legend>Pickup Details</legend>
+                <div class="form-group">
+                    <label for="pickup-date">Date:</label>
+                    <input type="date" id="pickup-date" name="pickup-date" required>
+                </div>
+                <div class="form-group">
+                    <label for="pickup-time">Time:</label>
+                    <input type="time" id="pickup-time" name="pickup-time" required>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Save</button>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+
+    <script src="pickup_officer_scripts.js"></script>
+</body>
+</html>

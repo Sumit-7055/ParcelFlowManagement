@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+    <link rel="stylesheet" href="payment_styles.css">
+</head>
+<body>
+    <div class="header">
+        <div class="welcome-message">Welcome, <span id="username">Customer</span></div>
+        <button id="logout">Logout</button>
+    </div>
+    
+    <div class="payment-container">
+        <h1>Payment Page</h1>
+        <div class="payment-details">
+            <label for="bill-amount">Bill Amount:</label>
+            <input type="text" id="bill-amount" value="$100.00" readonly>
+        </div>
+        
+        <div class="payment-options">
+            <label>Mode of Payment:</label>
+            <div>
+                <input type="radio" id="credit-card" name="payment-mode" value="credit-card">
+                <label for="credit-card">Credit Card</label>
+            </div>
+            <div>
+                <input type="radio" id="debit-card" name="payment-mode" value="debit-card">
+                <label for="debit-card">Debit Card</label>
+            </div>
+        </div>
+        
+        <button id="pay-now">Pay Now</button>
+        <button id="back-to-home">Back to Home</button>
+    </div>
+    
+    <div id="credit-card-form" class="hidden">
+        <h1>Enter Credit/Debit Card Details</h1>
+        <form id="payment-form">
+            <fieldset>
+                <legend>Card Details</legend>
+                <label for="card-no">Card No:</label>
+                <input type="text" id="card-no" maxlength="16" required>
+                
+                <label for="card-holder-name">Card Holder Name:</label>
+                <input type="text" id="card-holder-name" required>
+                
+                <label for="expiry-date">Expiry Date:</label>
+                <input type="text" id="expiry-date" placeholder="MM/YY" required>
+                
+                <label for="cvv">CVV:</label>
+                <input type="text" id="cvv" maxlength="3" required>
+            </fieldset>
+            <button type="button" id="make-payment">Make Payment</button>
+        </form>
+    </div>
+
+    <script src="payment_script.js"></script>
+</body>
+</html>

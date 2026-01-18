@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice Page</title>
+    <link rel="stylesheet" href="invoice_styles.css">
+</head>
+<body>
+    <div class="invoice-container">
+        <h1>Invoice</h1>
+
+        <div class="invoice-details">
+            <label for="receiver-name">Receiver Name:</label>
+            <input type="text" id="receiver-name" value="Debpritam Roy" readonly>
+
+            <label for="receiver-address">Receiver Address:</label>
+            <input type="text" id="receiver-address" value="63, SCM Road Sheoraphully,Hooghly" readonly>
+
+            <label for="receiver-pin">Receiver Pin:</label>
+            <input type="text" id="receiver-pin" value="712223" readonly>
+
+            <label for="receiver-mobile">Receiver Mobile:</label>
+            <input type="text" id="receiver-mobile" value="+91 833 708 0346" readonly>
+
+            <label for="parcel-weight">Parcel Weight (g):</label>
+            <input type="text" id="parcel-weight" value="1250" readonly>
+
+            <label for="parcel-contents">Parcel Contents Description:</label>
+            <textarea id="parcel-contents" rows="3" readonly>Books and Electronics</textarea>
+
+            <label for="parcel-delivery-type">Parcel Delivery Type:</label>
+            <input type="text" id="parcel-delivery-type" value="Express" readonly>
+
+            <label for="parcel-packaging">Parcel Packaging Preference:</label>
+            <input type="text" id="parcel-packaging" value="Eco-friendly Packaging" readonly>
+
+            <label for="parcel-handling">Parcel Handling Preference:</label>
+            <input type="text" id="parcel-handling" value="Fragile" readonly>
+
+            <label for="parcel-pickup-time">Parcel Pickup Time:</label>
+            <input type="text" id="parcel-pickup-time" value="2024-09-08 10:00 AM" readonly>
+
+            <label for="parcel-dropoff-time">Parcel Dropoff Time:</label>
+            <input type="text" id="parcel-dropoff-time" value="2024-09-08 4:00 PM" readonly>
+
+            <label for="parcel-service-cost">Parcel Service Cost:</label>
+            <input type="text" id="parcel-service-cost" value="$50.00" readonly>
+
+            <label for="parcel-payment-time">Parcel Payment Time:</label>
+            <input type="text" id="parcel-payment-time" value="2024-09-08 09:30 AM" readonly>
+        </div>
+
+        <button id="print-button">Print Invoice</button>
+    </div>
+
+    <script src="invoice_script.js"></script>
+</body>
+</html>
